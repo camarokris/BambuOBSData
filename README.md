@@ -3,6 +3,8 @@
 
 This was developed on Python 3.11.1 but should work within the Python 3 versions. 
 
+You can see the data being used in action on https://twitch.tv/techdaddy
+
 Make sure you have Python3 installed. You can check this from the command prompt by running `python3 --version` and that should return the current version you have installed. If you do not, you can install it from the MS Store on Windows or using your linux package manager of your choice. 
 
 ## Installation
