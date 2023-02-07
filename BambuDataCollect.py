@@ -58,9 +58,10 @@ def on_message(client, userdata, msg):
                     wtfs(tf, tfdata)
                 elif "start_" in setting:
                     date_time = datetime.datetime.fromtimestamp(int(data['print'][setting]))
-                    date_time_str = date_time.strftime('%Y-%m-%d %H:%M:%S %Z')
-                    end_time = date_time + datetime.timedelta(minutes=data['print']['mc_remaining_time'])
-                    end_time_str = end_time.strftime('%Y-%m-%d %H:%M:%S %Z')
+                    date_time_str = date_time.strftime('%b-%d %I:%M %p %Z')
+                    now = datetime.datetime.now()
+                    end_time = now + datetime.timedelta(minutes=int(data['print']['mc_remaining_time']))
+                    end_time_str = end_time.strftime('%b-%d %I:%M %p %Z')
                     wtfs(setting, date_time_str)
                     wtfs('gcode_end_time_estimated', end_time_str)
                 elif "remaining_" in setting:
