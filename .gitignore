@@ -3,3 +3,4 @@ venv
 .idea
 github
 github.pub
+/msgs/

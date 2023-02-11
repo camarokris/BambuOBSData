@@ -5,6 +5,8 @@ This was developed on Python 3.11.1 but should work within the Python 3 versions
 
 You can see the data being used in action on https://twitch.tv/techdaddy
 
+To use this data that is output you will want to use  the streamer.bot to middle man some of the functionality. Not having it will break the script as the script is set to connect to streamer.bots http server for scene information to automate stream scenes. If you comment out all but the payload line in the sbDoAction function in BambuDataCollect.py you can run this without that functionailty.
+
 Make sure you have Python3 installed. You can check this from the command prompt by running `python3 --version` and that should return the current version you have installed. If you do not, you can install it from the MS Store on Windows or using your linux package manager of your choice. 
 
 ## Installation
@@ -76,4 +78,12 @@ In the `.env` file you put the path where you want the output files to go to be 
 You can then use `Text(GDI+)` objects in your OBS scene to pull the data from the files. when you create your `Text(GDI+)` object you will check the "Read from file" check box and then choose the file you want to read from. OBS will update the data from that file on screen everytime it changes. 
 
 I included X1CFront.png in the assets folder so you can have a visual representation of the printer on stream and use the temp.png as temperature frames for the different readings. 
+
+
+## Data Gathering
+
+For those interested you can run logMessage.py to get a log of EVERY message that passes through the printers MQTT broker. 
+It will write every message to a file in the msgs directory and then use the parsejson.py script to parse every file in a directory and catalog ONLY the differences for each node. 
+I used it to find the data that is logged to files today. 
+
 
