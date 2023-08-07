@@ -1,3 +1,4 @@
+*** I will be returning to this project in September and update any major changes then. Life has just been a bit difficult lately ***
 # Bambu Lab 3D Printer Data Collector
 ### Made with OBS-Studio in mind for streaming
 
